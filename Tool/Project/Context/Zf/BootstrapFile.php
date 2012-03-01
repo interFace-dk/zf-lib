@@ -104,12 +104,11 @@ class Zend_Tool_Project_Context_Zf_BootstrapFile extends Zend_Tool_Project_Conte
         if ($this->_applicationInstance == null) {
             if ($this->_applicationConfigFile->getContext()->exists()) {
                 define('APPLICATION_PATH', $this->_applicationDirectory->getPath());
-                $applicationOptions = array();
-                $applicationOptions['config'] = $this->_applicationConfigFile->getPath();
+                $env = getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development';
 
                 $this->_applicationInstance = new Zend_Application(
-                    'development',
-                    $applicationOptions
+                    $env,
+                    $this->_applicationConfigFile->getPath()
                     );
             }
         }
