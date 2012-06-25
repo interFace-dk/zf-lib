@@ -622,5 +622,3 @@ class Zend_Log
         return $this->_timestampFormat;
     }
 }
-}
-}

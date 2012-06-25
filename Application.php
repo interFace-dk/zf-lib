@@ -415,5 +415,3 @@ class Zend_Application
         return $config->toArray();
     }
 }
-  }
-}

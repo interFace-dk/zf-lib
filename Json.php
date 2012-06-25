@@ -432,5 +432,3 @@ class Zend_Json
         return $result;
    }
 }
-  }
-}
