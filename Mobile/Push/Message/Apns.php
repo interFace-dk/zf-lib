@@ -137,7 +137,7 @@ class Zend_Mobile_Push_Message_Apns extends Zend_Mobile_Push_Message_Abstract
      */
     public function getBadge()
     {
-        return $this->_badge;
+        return (int) $this->_badge;
     }
 
     /**
